@@ -1,4 +1,4 @@
-package Part1;
+package Part1_Part2;
 
 public class Main {
     public static void main(String[] args) {

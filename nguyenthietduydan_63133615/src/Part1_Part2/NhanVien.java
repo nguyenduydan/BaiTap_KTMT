@@ -1,4 +1,4 @@
-package Part1;
+package Part1_Part2;
 
 public class NhanVien {
     private String ten;
