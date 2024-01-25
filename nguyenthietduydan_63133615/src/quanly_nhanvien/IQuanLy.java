@@ -1,4 +1,4 @@
-package Part1_Part2;
+package quanly_nhanvien;
 
 public interface IQuanLy {
     void them(NhanVien nv);

@@ -1,4 +1,4 @@
-package Part1_Part2;
+package quanly_nhanvien;
 
 public class NhanVien {
     private String ten;

@@ -1,8 +1,7 @@
-package Part3;
+package quanly_sinhvien;
 
 public abstract class SinhVienPoly {
     private String hoTen;
-
     private String nganh;
     public SinhVienPoly(String hoTen, String nganh){
         this.hoTen = hoTen;

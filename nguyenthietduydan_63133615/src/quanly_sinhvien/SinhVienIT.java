@@ -1,4 +1,4 @@
-package Part3;
+package quanly_sinhvien;
 
 public class SinhVienIT extends SinhVienPoly{
     private double diemJava;

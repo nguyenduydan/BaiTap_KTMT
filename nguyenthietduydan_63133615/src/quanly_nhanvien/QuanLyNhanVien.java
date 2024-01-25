@@ -1,12 +1,13 @@
-package Part1_Part2;
+package quanly_nhanvien;
 import java.util.ArrayList;
 import java.util.List;
 
 public class QuanLyNhanVien implements IQuanLy {
     private List<NhanVien> danhSachNV;
-    public QuanLyNhanVien(){
+    public QuanLyNhanVien() {
         danhSachNV = new ArrayList<>(); // tạo mảng để chứa các phẩn tử nhân viên
     }
+
     @Override
     public void them(NhanVien nhanVien){
         danhSachNV.add(nhanVien); // thêm nhân viên mới vào danh sách

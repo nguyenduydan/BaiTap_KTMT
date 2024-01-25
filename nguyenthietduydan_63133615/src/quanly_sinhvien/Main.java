@@ -1,4 +1,4 @@
-package Part3;
+package quanly_sinhvien;
 
 public class Main {
     public static void main(String[] args) {

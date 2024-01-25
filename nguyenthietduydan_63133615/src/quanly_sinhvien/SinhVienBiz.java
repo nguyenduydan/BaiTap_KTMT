@@ -1,4 +1,4 @@
-package Part3;
+package quanly_sinhvien;
 
 public class SinhVienBiz extends SinhVienPoly{
     private double diemMarketing;
