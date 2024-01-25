@@ -6,22 +6,24 @@ public class NhanVien {
     private String diaChi;
     private double tienLuong;
     private int tongGioLam;
-    public NhanVien(){
+
+    public NhanVien() {
         ten = "Nguyen Thiet Duy Dan";
         tuoi = 20;
         diaChi = "CC Binh Phu II, Nha Trang, KH";
         tienLuong = 200000;
         tongGioLam = 200;
     }
-    public NhanVien(String ten, int tuoi, String diaChi, double tienLuong, int tongGioLam){
-        this.ten =ten;
+
+    public NhanVien(String ten, int tuoi, String diaChi, double tienLuong, int tongGioLam) {
+        this.ten = ten;
         this.tuoi = tuoi;
         this.diaChi = diaChi;
-        this.tienLuong =tienLuong;
+        this.tienLuong = tienLuong;
         this.tongGioLam = tongGioLam;
     }
 
-    public String getThongTin(){
+    public String getThongTin() {
         return "Ten: " + ten +
                 "\nTuoi: " + tuoi +
                 "\nDia chi: " + diaChi +
@@ -29,12 +31,12 @@ public class NhanVien {
                 "\nTong so gio lam: " + tongGioLam;
     }
 
-    public double tinhThuong(){
-        if(tongGioLam >= 200){
-            return tienLuong * 20/100;
+    public double tinhThuong() {
+        if (tongGioLam >= 200) {
+            return tienLuong * 20 / 100;
         } else if (tongGioLam >= 100) {
-            return tienLuong * 10/100;
-        }else{
+            return tienLuong * 10 / 100;
+        } else {
             return 0;
         }
     }
