@@ -24,11 +24,11 @@ public class NhanVien {
     }
 
     public String getThongTin() {
-        return "Ten: " + ten +
-                "\nTuoi: " + tuoi +
-                "\nDia chi: " + diaChi +
-                "\nTien luong: " + tienLuong +
-                "\nTong so gio lam: " + tongGioLam;
+        return "Tên: " + ten +
+                "\nTuổi: " + tuoi +
+                "\nĐịa chỉ: " + diaChi +
+                "\nTiền lương: " + tienLuong +
+                "\nTổng số giờ làm: " + tongGioLam;
     }
 
     public double tinhThuong() {
@@ -80,4 +80,5 @@ public class NhanVien {
     public int getTongGioLam() {
         return tongGioLam;
     }
+
 }
