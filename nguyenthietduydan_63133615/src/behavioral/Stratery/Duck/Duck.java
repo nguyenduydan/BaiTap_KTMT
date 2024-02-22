@@ -14,7 +14,7 @@ public abstract class Duck {
     }
 
     void swim (){
-        System.out.println("Mình biết bới nhá!!!");
+        System.out.println("Mình biết bơi nhá!!!");
     }
     public void setFlyable(IFlyable flyable) {
         this.flyable = flyable;
