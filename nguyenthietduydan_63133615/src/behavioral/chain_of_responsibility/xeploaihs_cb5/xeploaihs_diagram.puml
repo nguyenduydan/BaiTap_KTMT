@@ -1,0 +1,15 @@
+@startuml
+'https://plantuml.com/class-diagram
+abstract class XepLoaiHocSinh
+{
+    double max;
+    String xepLoai;
+    + {abstract} XepLoaiHocSinh keTiep (XepLoaiHocSinh diemtb)
+    + {abstract} String  xepLoai(int diem)
+}
+
+XepLoaiHocSinh <|-- XepLoaiCaoNhat
+XepLoaiHocSinh <|-- XepLoaiBinhThuong
+XepLoaiHocSinh <-- XepLoaiBinhThuong: keTiep
+
+@enduml

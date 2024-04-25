@@ -1,0 +1,48 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+abstract ATM_TheoMenhGia{
+    int menhGia;
+    +{abstract}ATM_TheoMenhGia menhgiatieptheo(ATM_TheoMenhGia m)
+    +{abstract}void ruttien(int sotien)
+}
+
+abstract ChuoiMenhGiaFactory{
+    #{abstract}ATM_TheoMenhGia getChuoiMenhGia(int menhgia)
+    +void rutTien(int sotien, int menhGiaCaoNhat)
+}
+
+ChuoiMenhGiaFactory ...> ATM_TheoMenhGia
+ChuoiMenhGiaVND *--> ATM_TheoMenhGia:"menhgia500,\nmenhgia100,\n...\nmenhgia"
+ATM_TheoMenhGia <|--- MenhGia
+ATM_TheoMenhGia <|--- MenhGiaThapNhat
+MenhGia --> ATM_TheoMenhGia : ketiep
+ChuoiMenhGiaFactory <|-- ChuoiMenhGiaVND
+
+note bottom of MenhGiaThapNhat
+    Phương thức rút tiền
+        số tờ = sotien/menhGia
+        in số tờ: menhGia
+end note
+
+note bottom of MenhGia
+    Phương thức rút tiền
+        số tờ = sotien/menhGia
+        số dư = sotien/menhGia
+        if tờ > 0: số tờ: menhGia
+        if dư > 0: ketiep.ruttien(soDu)
+end note
+
+note left of ChuoiMenhGiaVND
++ Tạo các đối tượng atm_theomenhgia theo mệnh giá tiền VND
++ Kết nối các đối tượng này thành các chuỗi trong phương thức khởi tạo
++ Phương thức getChuoiMenhGia trả về
++ Đối tượng kiểu ATM_TheoMenhGia trong chuỗi ứng giá trị đầu vào
+end note
+
+note left of ChuoiMenhGiaFactory
++ Phương thức rutTien:
+- Gọi phương thức getChuoiMenhGia -> chuoiMenhGia
+- Gọi phương thức rutTien trên đối tượng chuoiMenhGia
+end note
+
+@enduml
