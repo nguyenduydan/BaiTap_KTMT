@@ -1,7 +1,5 @@
 package creational.singleton.vidu;
 
-import creational.singleton.MySingleton;
-
 public class MainMySingleton {
     public static void main(String[] args) {
         MySingleton s1 = MySingleton.getInstance();

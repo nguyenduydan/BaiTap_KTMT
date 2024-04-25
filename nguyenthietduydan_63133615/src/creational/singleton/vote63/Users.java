@@ -8,6 +8,7 @@ public class Users {
     }
 
     public void vote(Candiate c){
-       myElection.getInstance().vote(c,name);
+
+        myElection.getInstance().vote(c,name);
     }
 }

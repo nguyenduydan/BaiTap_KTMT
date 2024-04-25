@@ -1,0 +1,53 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class NhanVienF88
+class ChuTich
+class NhanVien
+'Kế thừa'
+NhanVienF88 <|-- ChuTich
+'càng nhiều -- thì càng dài'
+
+NhanVienF88 <-- NhanVien
+NhanVienF88 <-- MainF88
+NhanVien ---> NhanVienF88: capTren
+
+'+: là public, -: private'
+abstract class NhanVienF88{
+   String ten
+   String chucVu
+   int hanMucXuLy
+   +{abstract} NhanVienF88 capCaoHon(NhanVienF88 nv)
+   +String xuLyKhoanVay(int tienVay)
+}
+class NhanVien{
+    +String xuLyKhoanVay((int tienVay)
+}
+note right of NhanVien::xuLyKhoanVay
+    - Kiểm tra nếu tienVay <=hanMucXuLy:
+    trả về: Chức vụ tên xử lý khoản hanMucXuLy
+    Vd: Bảo vệ Hoàng xử lý khoản vay 50tr
+    ngược lại: Chuyển công việc xử lý vay cho cấp trên
+end note
+
+class ChuTich{
+    +String xuLyKhoanVay(int tienVay)
+}
+
+note right of ChuTich::xuLyKhoanVay
+    - Kiểm tra nếu tienVay <=hanMucXuLy:
+    trả về: Chức vụ tên xử lý khoản hanMucXuLy
+    Ngược lại: DIE
+end note
+
+class MainF88
+
+note right of MainF88
+    Trong phương thức main:
+     + Tạo các đối tượng NhanVienF88 thuộc lớp NhanVien
+     + Tạo các đối tượng NhanVienF88 thuộc lớp ChuTich
+     + kết nối chuỗi các đối tượng
+     + Gọi pt xuLyKhoanVay trên đối tượng đầu tiên của chuỗi
+end note
+
+@enduml

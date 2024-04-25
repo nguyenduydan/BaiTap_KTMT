@@ -1,7 +1,5 @@
 package behavioral.template_method.caffein_beverage;
 
-import java.sql.SQLOutput;
-
 public abstract class CaffeineBeverage {
     protected abstract void brew();
     protected abstract void addCondiments();
@@ -17,5 +15,4 @@ public abstract class CaffeineBeverage {
         pourInCup();
         addCondiments();
     }
-
 }

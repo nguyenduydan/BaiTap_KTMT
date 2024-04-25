@@ -1,0 +1,30 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface MyTokenize
+{
+    + List<String> tokenize()
+}
+class TachTu{
+    +List<String> tokenize()
+}
+
+MyTokenize <|... TachTu
+MyTokenize <|... TokenizeDecorator
+
+abstract class TokenizeDecorator{
+    +List<String> tokenize()
+}
+class RemoveStopWord{
+    +List<String> tokenize()
+}
+class RemovePunctuation{
+    +List<String> tokenize()
+}
+
+TokenizeDecorator--> MyTokenize : token
+TokenizeDecorator <|-- RemoveStopWord
+TokenizeDecorator <|-- RemovePunctuation
+
+
+@enduml

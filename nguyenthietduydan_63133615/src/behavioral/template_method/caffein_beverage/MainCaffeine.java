@@ -8,5 +8,4 @@ public class MainCaffeine {
         CaffeineBeverage tea = new Tea();
         tea.prepareRacipe();
     }
-
 }
