@@ -11,7 +11,7 @@ public class XepLoaiCaoNhat extends XepLoaiHocSinh{
     }
 
     @Override
-    public String xepLoai(int diem) {
+    public String xepLoai(double diem) {
         StringBuilder builder = new StringBuilder();
         builder.append("Xếp loại: ").append(xepLoai);
         return builder.toString();

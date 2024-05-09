@@ -8,6 +8,6 @@ public class MainCB5 {
         XepLoaiHocSinh hs4 = new XepLoaiBinhThuong("Giỏi",9);
         XepLoaiHocSinh hs5 = new XepLoaiCaoNhat("Xuất sắc",10);
         hs1.keTiep(hs2).keTiep(hs3).keTiep(hs4).keTiep(hs5);
-        System.out.println(hs1.xepLoai(6));
+        System.out.println(hs1.xepLoai(7.5));
     }
 }

@@ -14,7 +14,7 @@ public class XepLoaiBinhThuong extends XepLoaiHocSinh{
     }
 
     @Override
-    public String xepLoai(int diem) {
+    public String xepLoai(double diem) {
         StringBuilder builder = new StringBuilder();
         if(diem <= max)
             builder.append("Xếp loại: ").append(xepLoai);

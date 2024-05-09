@@ -9,5 +9,5 @@ public abstract class XepLoaiHocSinh {
     }
 
     public abstract XepLoaiHocSinh keTiep(XepLoaiHocSinh diemTB);
-    public abstract String xepLoai(int diem);
+    public abstract String xepLoai(double diem);
 }

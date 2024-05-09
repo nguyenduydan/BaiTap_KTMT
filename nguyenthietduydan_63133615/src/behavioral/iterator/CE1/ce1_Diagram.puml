@@ -1,0 +1,22 @@
+@startuml
+
+interface Collection63{
+    MyIterator createIterator()
+}
+interface Iterator63{
+    + Object first()
+    + Object next()
+    + Object current()
+    + bool isDone()
+}
+
+class ArrayCollection{
+    - int[] arr
+    + int getItem(int i)
+    + int count()
+}
+
+Collection63 <|.. ArrayCollection
+Iterator63 <|.. ArrayIterator
+ArrayIterator --> ArrayCollection: collecton
+@enduml
