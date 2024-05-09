@@ -6,8 +6,8 @@ public class UpgradeRAM extends PCDecorator{
 
     public UpgradeRAM(PC pc, String newRam, int newValueRam) {
         super(pc);
-        this.newRam = newRam;
         pc.ram = newRam;
+        this.newRam = newRam;
         this.newValueRam = newValueRam;
     }
 
@@ -26,7 +26,7 @@ public class UpgradeRAM extends PCDecorator{
 
     @Override
     public String getRam() {
-        return super.getRam() + " " + newRam;
+        return newRam;
     }
 
     @Override

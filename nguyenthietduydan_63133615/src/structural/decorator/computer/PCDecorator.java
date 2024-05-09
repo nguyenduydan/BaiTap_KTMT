@@ -9,7 +9,7 @@ public abstract class PCDecorator extends PC {
 
     @Override
     public String build() {
-        return null;
+        return "";
     }
 
     @Override

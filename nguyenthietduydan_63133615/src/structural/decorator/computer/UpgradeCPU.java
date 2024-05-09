@@ -7,8 +7,8 @@ public class UpgradeCPU extends PCDecorator{
     public UpgradeCPU(PC pc, String newCpu, int newValueCpu) {
         super(pc);
         this.newCpu = newCpu;
-        this.newValueCpu = newValueCpu;
         pc.cpu = newCpu;
+        this.newValueCpu = newValueCpu;
     }
 
     @Override
@@ -26,7 +26,7 @@ public class UpgradeCPU extends PCDecorator{
 
     @Override
     public String getCpu() {
-        return super.getCpu() + " " + newCpu;
+        return this.newCpu;
     }
 
     @Override
