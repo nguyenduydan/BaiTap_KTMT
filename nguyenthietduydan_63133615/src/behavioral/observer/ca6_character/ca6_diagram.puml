@@ -1,0 +1,24 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class PlayerData{
+    - int thoiGian, countdown, grade
+}
+class DashBoard
+interface Player{
+    +
+}
+
+Player <|.. DashBoard
+DashBoard --> PlayerData:data
+PlayerData --> Player
+
+note bottom of DashBoard
+    concrete Observer
+end note
+
+note bottom of PlayerData
+    Subject
+end note
+
+@enduml
