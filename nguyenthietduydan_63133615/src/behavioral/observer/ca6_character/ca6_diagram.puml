@@ -5,20 +5,22 @@ class PlayerData{
     - int thoiGian, countdown, grade
 }
 class DashBoard
-interface Player{
-    +
+interface PlayerDataListener{
+    +void listen(PlayerData data)
 }
 
-Player <|.. DashBoard
-DashBoard --> PlayerData:data
-PlayerData --> Player
+PlayerDataListener <|.. DashBoard
+DashBoard --> PlayerData:player
+PlayerData --> PlayerDataListener:listener
 
 note bottom of DashBoard
     concrete Observer
 end note
 
-note bottom of PlayerData
+note right of PlayerData
     Subject
+    Các setter:
+        khi cập nhật giá trị thì gọi phương thức listen của PlayerDataListener
 end note
 
 @enduml
