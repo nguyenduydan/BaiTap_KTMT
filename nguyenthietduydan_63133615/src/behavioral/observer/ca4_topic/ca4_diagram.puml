@@ -1,0 +1,37 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Topic{
+    - List<TinTuc> list
+    + void dangKy(TopicListener listener)
+    + void huydangKy(TopicListener listener)
+    + void themMoi(TinTuc t)
+    + void capNhat(TinTuc t)
+}
+class ThanhVienA
+class ThanhVienB
+
+interface TopicListener{
+    void listen(TinTuc t)
+}
+
+TopicListener <--o Topic: listeners
+TopicListener <|.. ThanhVienA
+TopicListener <|.. ThanhVienB
+ThanhVienA --> Topic: topic
+ThanhVienB --> Topic: topic
+
+note bottom of Topic
+    Subject
+end note
+
+note bottom of ThanhVienA
+    Observer
+end note
+note bottom of ThanhVienB
+    Observer
+end note
+
+
+
+@enduml

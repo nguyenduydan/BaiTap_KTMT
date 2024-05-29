@@ -1,0 +1,37 @@
+@startuml
+
+abstract class GiaiThuong{
+    String tenGiai
+    List<String> daySoTrungThuong
+    + {abstract} void doVeSo(String veSo)
+    + {abstract} GiaiThuong giaiKeTiep(GiaiThuong keTiep)
+}
+
+class GiaiThapNhat
+class GiaiThongThuong
+class GiaiKhuyenKhich
+
+GiaiThuong <|-- GiaiThapNhat
+GiaiThuong <|-- GiaiThongThuong
+GiaiThongThuong --> GiaiThuong:keTiep
+GiaiThuong <|-- GiaiKhuyenKhich
+GiaiKhuyenKhich --> GiaiThuong:keTiep
+
+note bottom of GiaiThapNhat
+    Duyệt qua chuỗi s trong daySoTrungThuong
+    Nếu veSo kết thúc bằng chuỗi s:
+        Thông báo trúng thưởng
+        return
+    Ngược lại, "Chúc bạn may mắn lần sau"
+end note
+
+note bottom of GiaiThongThuong
+    Duyệt qua chuỗi s trong daySoTrungThuong
+    Nếu veSo kết thúc bằng chuỗi s:
+        Thông báo trúng thưởng
+        return
+    Ngược lại, giaiKeTiep
+end note
+
+
+@enduml
